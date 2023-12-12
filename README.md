@@ -12,3 +12,9 @@ Este proyecto demuestra cómo utilizar PDFplumber directamente en el navegador m
 ### Cómo Probar
 
 Ejecuta el archivo `index.html` ya sea abriéndolo en tu navegador o sirviéndolo con Live Server desde VSCode.
+
+## Loading dependencies
+![loading dependencies](./assets/Screenshot_20231211_203432.png)
+
+## Loading PDF
+![loading pdf](./assets/PDFplumber-in-browsers-Pyodide.png)
