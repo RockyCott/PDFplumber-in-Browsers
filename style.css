@@ -1,0 +1,84 @@
+body {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin: 60px;
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+h1 {
+  margin-bottom: 10px;
+  font-size: 1.8em;
+}
+#filePDF {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+#submitBtn {
+  padding: 10px;
+  background-color: #6b79f0;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/** disabled submit button */
+#submitBtn:disabled {
+  background-color: #ddd;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+#output {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  white-space: pre-wrap;
+  overflow: hidden;
+}
+#carousel-container {
+  margin-top: 20px;
+  overflow: hidden;
+  position: relative;
+}
+#carousel,
+#carousel-imgs {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  margin-bottom: -1px;
+}
+.page {
+  flex: 0 0 auto;
+  width: 100%;
+  scroll-snap-align: start;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+  box-sizing: border-box;
+  text-align: left;
+}
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #6b79f0;
+}
+.arrow-left {
+  left: 0;
+}
+.arrow-right {
+  right: 0;
+}

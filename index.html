@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDFplumber in browsers - Pyodide</title>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        <a href="https://pypi.org/project/pdfplumber/" target="_blank"
+          >PDFplumber</a
+        >
+        in browsers -
+        <a
+          href="https://pyodide.org/en/stable/usage/quickstart.html"
+          target="_blank"
+          >Pyodide</a
+        >
+      </h1>
+      <input type="file" id="filePDF" name="filePDF" />
+      <button id="submitBtn" onclick="plumb()"></button>
+      <div id="output"></div>
+      <div id="carousel-container">
+        <div id="carousel"></div>
+        <div class="arrow arrow-left" onclick="scrollCarousel(-1)">❮</div>
+        <div class="arrow arrow-right" onclick="scrollCarousel(1)">❯</div>
+      </div>
+      <div id="footer">
+        <p>
+          Make magic directly in the browser thanks to
+          <a href="https://webassembly.org/" target="_blank">WebAssembly!</a>
+        </p>
+        <p>
+          With ❤️ by
+          <a href="https://github.com/RockyCott" target="_blank">Rockycott</a>
+        </p>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

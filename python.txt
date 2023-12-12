@@ -1,0 +1,23 @@
+import pdfplumber
+import base64
+from io import BytesIO
+import js
+
+file_content = BytesIO(base64.b64decode("${contents}"))
+
+output = js.document.getElementById("output")
+output.style.display = "block"
+pages = []
+with pdfplumber.open(file_content) as pdf:
+    num_pages = len(pdf.pages)
+    for i in range(num_pages):
+        page = pdf.pages[i]
+        text = page.extract_text()
+        pages.append(text)    
+    
+output.innerHTML = "<strong>File Details</strong>"
+output.innerHTML += "<h3>file name: " + "${file.name}" + "</h3>"
+output.innerHTML += "<h3>number of pages: " + str(num_pages) + "</h3>"
+for key in pdf.metadata:
+    output.innerHTML += "<p>" + key + ": " + pdf.metadata[key] + "</p>"
+buildCarrousel(pages)
